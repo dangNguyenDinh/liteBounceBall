@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./asset/ball.png" type="png">
+    <title>bao ci bôn</title>
+</head>
+<body>
+    <div id="wrapper">
+        <img src="./asset/stop.png" alt="s" class="start1">
+        <img src="./asset/start.gif" alt="s" class="start2">
+        <img src="./asset/rapid.png" alt="r" class="rapid">
+        <audio src="./asset/selectSound.mp3" id="tap"></audio>
+    </div>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+        #wrapper{
+            background: url("./asset/backGround.jpg");
+            background-size: cover ; 
+            position: absolute;
+            width: 50vw;
+            height: 100vh;
+            transform: translateX(-50%);
+            left: 50%;
+        }
+        .start1{
+            width: 40vw;
+            position: absolute;
+            transform: translateX(-50%) translateY(-50%);
+            left: 50%;
+            top: 60%;
+            z-index: 1;
+        }
+        .start2{
+            width: 40vw;
+            position: absolute;
+            transform: translateX(-50%) translateY(-50%);
+            left: 50%;
+            top: 60%;
+        }
+        .rapid{
+            width: 50vw;
+            position: absolute;
+            transform: translateX(-50%);
+            left: 50%;
+        }
+    </style>
+    <script>
+        document.querySelector(".start1").onclick = ()=>{
+            document.querySelector("#tap").play();
+            document.querySelector(".start1").style.display = "none";
+            setTimeout(()=>{
+                window.location.href = "index2.html";
+            }, 3000)
+        }
+        
+    </script>
+</body>
+</html>
