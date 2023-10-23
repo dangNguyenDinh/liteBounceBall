@@ -199,7 +199,7 @@ setTimeout(()=>{
     let mainInterval = setInterval(()=>{
         //console.log(count)
         count++;
-        if(count%100 == 0){
+        if(count%60 == 0){
             var child = document.createElement("img");
 
             var thornOK =(Math.floor((Math.random()*9)) == 8)?true:false;
